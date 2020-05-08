@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary: #000000;
+  --secondry: #EDC634;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--primary);
+}
+
+.container {}
+
+/* header styling */
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+  background: #141414;
+  padding: 0 10px;
+}
+
+.hemb div {
+  width: 30px;
+  height: 3px;
+  background: var(--secondry);
+  border-radius: 5px;
+}
+
+.hemb .two {
+  margin: 5px 0;
+  width: 20px;
+}
+
+.hemb .three {
+  width: 10px;
+}
+
+header span {
+  font-size: 20px;
+}
+
+span i {
+  color: var(--secondry);
+}
+
+/* styling slider*/
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #141414;
+  padding-top: 10%;
+  margin-top: 10vh;
+  position: absolute;
+  top: -35%;
+  width: 100%;
+  height: 30vh;
+}
+
+.animation {
+  animation: slide .5s linear forwards;
+}
+
+.slide button {
+  width: 140px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.slide .login {
+  background: red;
+  color: white;
+  font-weight: 600;
+}
+
+.slide .signup {
+  background: yellow;
+  font-weight: 600;
+}
+
+/* main styling */
+
+#showcase {
+  height: 40vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background: url(images/startup.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.text h1 {
+  text-transform: capitalize;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.text h1 span {
+  color: var(--secondry);
+}
+
+.text p {
+  font-size: 14px;
+  color: #ddd;
+  font-weight: 600;
+}
+
+/* grid view */
+.category {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 5px;
+  margin: 20px auto;
+  padding-left: 10px;
+  width: 100%;
+  height: 45vh;
+}
+
+.category div {
+  width: 160px;
+  height: 120px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.category .news {
+  background: linear-gradient(#ffffff00, #ffffffff), url(images/stars.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category .facts {
+  background: linear-gradient(#ffffff00, #ffffffff), url(images/moon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category .cosmos {
+  background: linear-gradient(#ffffff00, #ffffffff), url(images/space.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category .tech {
+  background: linear-gradient(#ffffff00, #ffffffff), url(images/counting_star.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* banner stying */
+.banner {
+  margin: 0 10px;
+  margin-bottom: 10px;
+  height: 18vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #F18A15, #E3DE44);
+  border-radius: 10px;
+  padding: 0 10px;
+  box-shadow: 0 0 3px #E3DE44;
+}
+
+.banner h3 {
+  font-size: 16px;
+  color: var(--background);
+  text-align: left;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px #ffffff77;
+}
+
+.banner button {
+  width: 120px;
+  height: 35px;
+  background: #a31010;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 1px black;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 672px) {
+  body {
+    background: blue;
+    opacity: 0.8;
+  }
+
+  .container {
+    visibility: hidden;
+    top: 0;
+  }
+
+  .error {
+    visibility: visible;
+    height: 100%;
+  }
+
+}
+
+@keyframes slide {
+  from {
+    top: -35%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
